@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Joris Texier</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --bg-soft: #121a2b;
+      --card: #182235;
+      --text: #e6edf7;
+      --muted: #a7b4c8;
+      --line: #2a3750;
+      --accent: #4da3ff;
+      --accent-2: #7dd3fc;
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eef0f3;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent-2);
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(238, 240, 243, 0.9);
+      border-bottom: 1px solid rgba(30, 58, 138, 0.08);
+    }
+
+    .nav {
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #c9c9c9;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .menu {
+      display: flex;
+      gap: 12px;
+      list-style: none;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .menu a {
+      color: #6b7280;
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 14px 18px;
+      display: inline-block;
+      transition: 0.2s ease;
+    }
+
+    .menu a:hover {
+      color: #355d8c;
+    }
+
+    .menu a.active-link {
+      background: #355d8c;
+      color: white;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+    }
+
+    .hero-home {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+      min-height: 70vh;
+    }
+
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(77, 163, 255, 0.08);
+      color: var(--accent-2);
+      margin-bottom: 18px;
+      font-size: 0.92rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 24px;
+      font-size: 1.02rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: white;
+      font-weight: 600;
+      transition: 0.2s ease;
+      box-shadow: var(--shadow);
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent), #2563eb);
+      border: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      color: #1e3a8a;
+      margin-bottom: 26px;
+    }
+
+    .hero-text p {
+      color: #22304a;
+      font-size: 1.12rem;
+      max-width: 620px;
+      margin-bottom: 22px;
+      line-height: 1.7;
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    
+    section {
+      padding: 72px 0;
+    }
+
+    .section-title {
+      font-size: 2.1rem;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .section-text {
+      color: #4b5563;
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #dbe3ef;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .card ul {
+      padding-left: 18px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      border-left: 4px solid var(--accent);
+      padding: 18px 18px 18px 20px;
+      background: var(--card);
+      border-radius: 0 16px 16px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-item span {
+      display: inline-block;
+      color: var(--accent-2);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .page-section {
+      display: none;
+    }
+
+    .active-section {
+      display: block;
+    }
+
+    footer {
+      padding: 28px 0 40px;
+      border-top: 1px solid rgba(30,58,138,0.08);
+      color: #4b5563;
+      text-align: center;
+    }
+
+    .skills-home {
+      padding-top: 20px;
+    }
+
+    .skills-columns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+      margin-bottom: 36px;
+    }
+
+    .skill-box {
+      padding: 18px 10px 10px;
+    }
+
+    .skill-box h3 {
+      font-size: 1.5rem;
+      color: #0f172a;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .skill-box ul {
+      margin-top: 16px;
+      padding-left: 22px;
+      color: #1f2937;
+      border-top: 1px solid #d7dde8;
+      padding-top: 22px;
+      line-height: 1.9;
+    }
+
+    .progress-zone {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 0 10px;
+    }
+
+    .progress-title {
+      font-size: 2rem;
+      margin-bottom: 24px;
+      color: #2563eb;
+    }
+
+    
+    .progress-item span {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    
+    
+    @media (max-width: 900px) {
+      .hero-home,
+      .cards,
+      .grid-2,
+      .skills-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        padding: 14px 0;
+        flex-direction: column;
+      }
+
+      .menu {
+        gap: 12px;
+      }
+
+      .hero-text h1,
+      .hero-text p {
+        text-align: left;
+      }
+
+      .brain-card {
+        width: 220px;
+        height: 220px;
+      }
+    }
+
+      .nav {
+        align-items: flex-start;
+        padding: 14px 0;
+        flex-direction: column;
+      }
+
+      .menu {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">PORTFOLIO</div>
+      <ul class="menu">
+        <li><a href="#accueil" class="active-link">ACCUEIL</a></li>
+        <li><a href="#formation">FORMATION</a></li>
+        <li><a href="#parcours">PARCOURS</a></li>
+        <li><a href="#projets">PROJETS</a></li>
+        <li><a href="#veille">VEILLE</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero page-section active-section" id="accueil">
+      <div class="container" style="padding: 120px 0 40px;">
+        <h1 style="font-size: 3rem; color:#1e3a8a; margin-bottom:20px;">Bienvenue sur mon Portfolio</h1>
+        <p style="font-size:1.2rem; margin-bottom:10px; color:#1f2937;">Je m'appelle <strong>Joris Texier</strong></p>
+        <p style="font-size:1.2rem; color:#1f2937;">Etudiant en <strong>BTS SIO option SISR</strong></p>
+      </div>
+
+      <div class="container" style="padding-bottom:60px;">
+        <h2 class="section-title center">Compétences acquises</h2>
+
+        <div class="skills-columns">
+          <div class="skill-box">
+            <h3>Réseaux & Infrastructures</h3>
+            <ul>
+              <li>VLAN, routage inter-VLAN, NAT/PAT, ACL</li>
+              <li>Spanning Tree (STP), OSPF, HSRP, vPC</li>
+              <li>VPN, proxy / reverse proxy</li>
+              <li>Cluster, haute disponibilité</li>
+            </ul>
+          </div>
+
+          <div class="skill-box">
+            <h3>Systèmes & Virtualisation</h3>
+            <ul>
+              <li>Active Directory, GPO, DFS</li>
+              <li>PKI, DHCP, DNS, bastion d’administration</li>
+              <li>Hyper-V, VMware, Proxmox</li>
+              <li>Gestion RAID, NAS</li>
+            </ul>
+          </div>
+
+          <div class="skill-box">
+            <h3>Services, Sécurité & Outils</h3>
+            <ul>
+              <li>Tests d’intrusion (Kali Linux)</li>
+              <li>Pare-feu : Stormshield, Palo Alto</li>
+              <li>Supervision : Zabbix, GLPI</li>
+              <li>Docker, PowerShell, Bash, Ansible</li>
+              <li>Cloud : AWS, Microsoft Azure</li>
+              <li>Gestion de versions : Git</li>
+            </ul>
+          </div>
+        </div>
+
+        </div>
+          </div>
+
+          </div>
+          </div>
+
+          </div>
+          </div>
+
+          </div>
+          </div>
+
+          </div>
+          </div>
+
+          </div>
+          </div>
+
+          </div>
+          </div>
+
+          </div>
+          </div>
+
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profil" class="page-section">
+      <div class="container">
+        <h2 class="section-title">Profil & Compétences</h2>
+        <p class="section-text">
+          Je m'appelle <strong>Joris Texier</strong>, étudiant en <strong>BTS SIO option SISR</strong>.
+        </p>
+
+        <div class="skills-columns">
+          <div class="skill-box">
+            <h3>Systèmes</h3>
+            <ul>
+              <li>Linux (Kali, Debian, Ubuntu)</li>
+              <li>Windows (Server 2003 à 2019, XP à 11)</li>
+              <li>Mac OS X</li>
+            </ul>
+          </div>
+
+          <div class="skill-box">
+            <h3>Réseaux</h3>
+            <ul>
+              <li>DHCP, DNS, Active Directory, VPN</li>
+              <li>VLAN, routage, NAT, ACL</li>
+              <li>Firewall Stormshield</li>
+              <li>Haute disponibilité</li>
+            </ul>
+          </div>
+
+          <div class="skill-box">
+            <h3>Scripting</h3>
+            <ul>
+              <li>PowerShell</li>
+              <li>Python</li>
+            </ul>
+          </div>
+        </div>
+
+        </div>
+          </div>
+
+          </div>
+          </div>
+
+          </div>
+          </div>
+
+          </div>
+          </div>
+
+          </div>
+          </div>
+
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="page-section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-text">Remplacez ces liens par vos vraies informations.</p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Me joindre</h3>
+            <p>Email : <a href="mailto:joristexier37290@gmail.com">joristexier37290@gmail.com</a></p>
+            <p>GitHub : <a href="https://github.com/Joris-Texier" target="_blank">Joris-Texier</a></p>
+            <p>LinkedIn : <a href="https://www.linkedin.com/in/joris-texier-0939b7314/" target="_blank">Profil LinkedIn</a></p>
+          </div>
+          <div class="card">
+            <h3>CV</h3>
+            <p>Ajoutez ici un bouton ou un lien vers votre CV en PDF.</p>
+            <a class="btn primary" href="https://drive.google.com/file/d/1jEHHK6z1tsTrzlUlDeTbD-fDbb4E4m3K/view?usp=sharing" target="_blank">Télécharger mon CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const navLinks = document.querySelectorAll('.menu a');
+    const sections = document.querySelectorAll('.page-section');
+
+    function showSection(sectionId) {
+      sections.forEach(section => {
+        section.classList.remove('active-section');
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active-link');
+      });
+
+      const target = document.querySelector(sectionId);
+      const activeLink = document.querySelector(`.menu a[href="${sectionId}"]`);
+
+      if (target) {
+        target.classList.add('active-section');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      if (activeLink) {
+        activeLink.classList.add('active-link');
+      }
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          showSection(href);
+        }
+      });
+    });
+  </script>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 - Joris Texier - Portfolio BTS SIO SISR</p>
+    </div>
+  </footer>
+  <canvas id="bg-canvas"></canvas>
+
+  <script>
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particles = [];
+
+    for (let i = 0; i < 60; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 1,
+        vy: (Math.random() - 0.5) * 1
+      });
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = 0; i < particles.length; i++) {
+        let p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+        ctx.fillStyle = '#2563eb';
+        ctx.fill();
+
+        for (let j = i + 1; j < particles.length; j++) {
+          let p2 = particles[j];
+          let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.strokeStyle = 'rgba(37, 99, 235, 0.2)';
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(draw);
+    }
+
+    draw();
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+
+  <style>
+    #bg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  </style>
+</body>
+</html>
