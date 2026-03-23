@@ -394,6 +394,91 @@
       font-size: 1.05rem;
     }
 
+    .stage-detail-layout {
+      display: grid;
+      grid-template-columns: 1.5fr 0.5fr;
+      gap: 34px;
+      align-items: start;
+      margin-top: 28px;
+    }
+
+    .stage-detail-content {
+      background: rgba(255,255,255,0.35);
+      border: 1px solid #dbe3ef;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .stage-main-title {
+      color: #1e3a8a;
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .stage-period {
+      font-size: 1.15rem;
+      color: #111827;
+      margin-bottom: 18px;
+    }
+
+    .stage-subtitle {
+      color: #1e3a8a;
+      font-size: 1.35rem;
+      margin: 20px 0 12px;
+    }
+
+    .stage-missions,
+    .stage-skills {
+      padding-left: 24px;
+      color: #374151;
+    }
+
+    .stage-missions li,
+    .stage-skills li {
+      margin-bottom: 12px;
+      font-size: 1.08rem;
+    }
+
+    .stage-side-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+      background: rgba(255,255,255,0.35);
+      border: 1px solid #dbe3ef;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .stage-logo-box {
+      width: 100%;
+      min-height: 240px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+    }
+
+    .st-logo {
+      font-size: 5rem;
+      font-weight: 800;
+      line-height: 1;
+      color: #0f766e;
+      letter-spacing: -6px;
+    }
+
+    .st-logo-sub {
+      margin-top: 10px;
+      color: #374151;
+      font-size: 1.15rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
     footer {
       padding: 28px 0 40px;
       border-top: 1px solid rgba(30, 58, 138, 0.08);
@@ -480,7 +565,8 @@
       .cards,
       .grid-2,
       .skills-columns,
-      .parcours-layout {
+      .parcours-layout,
+      .stage-detail-layout {
         grid-template-columns: 1fr;
       }
 
@@ -731,10 +817,10 @@
                 <div class="parcours-date">05/01/2026 - 20/02/2026</div>
                 <div class="parcours-card">
                   <p><strong>STMicroelectronics</strong></p>
-                  <p>- Migration de l’infrastructure réseau du datacenter.</p>
-                  <p>- Remplacement des Cisco Catalyst C9400-supp1 par des Cisco Nexus 93108TC-FX3P.</p><br>
-                  <p>- Remplacement des Catalyst 9120I par des Catalyst 9164I.</p><br>
-                  <p>- Mise en place de firewall pour le réseau datacenter sur le site de Rennes.</p>
+                  <p>Migration de l’infrastructure réseau du datacenter.</p>
+                  <p>Remplacement des Cisco Catalyst C9400-supp1 par des Cisco Nexus 93108TC-FX3P.</p>
+                  <p>Remplacement des Catalyst 9120I par des Catalyst 9164I.</p>
+                  <p>Mise en place de firewall pour le réseau datacenter sur le site de Rennes.</p>
                 </div>
               </div>
 
@@ -743,8 +829,8 @@
                 <div class="parcours-date">06/01/2025 - 14/02/2025</div>
                 <div class="parcours-card">
                   <p><strong>DGFIP</strong></p>
-                  <p>- Installation et configuration de Docker avec Zabbix, Joplin Server et Portainer.</p><br>
-                  <p>- Mise en place d’un système de sauvegarde et de monitoring avancé pour les conteneurs Docker.</p>
+                  <p>Installation et configuration de Docker avec Zabbix, Joplin Server et Portainer.</p>
+                  <p>Mise en place d’un système de sauvegarde et de monitoring avancé pour les conteneurs Docker.</p>
                 </div>
               </div>
 
@@ -753,9 +839,11 @@
                 <div class="parcours-date">21/05/2024 - 26/06/2024</div>
                 <div class="parcours-card">
                   <p><strong>Audilab</strong></p>
-                  <p>- Gestion administrative d'une base de données sur Clarilog, mise à jour des données des utilisateurs.</p><br>
-                  <p>- Mise en place de rapport mensuel concernant l'usage d'Internet à l'aide de la solution Cisco Meraki ​Simulation de Phishing avec l’outil Mailinblack pour évaluer la vulnérabilité des employés et sensibiliser aux cybermenaces</p><br>
-                  <p>- Gestion des groupes et utilisateurs d’un Active Directory.</p>
+                  <p>Gestion administrative d'une base de données sur Clarilog.</p>
+                  <p>Mise à jour des données des utilisateurs.</p>
+                  <p>Rapport mensuel sur l'usage d’Internet avec Cisco Meraki.</p>
+                  <p>Simulation de phishing avec Mailinblack.</p>
+                  <p>Gestion des groupes et utilisateurs d’un Active Directory.</p>
                 </div>
               </div>
             </div>
@@ -766,8 +854,45 @@
 
     <section id="stages" class="page-section">
       <div class="container">
-        <h2 class="section-title" style="color:#1e3a8a;">Stages</h2>
-        <p class="section-text">Contenu à venir.</p>
+        <h2 class="section-title" style="color:#1e3a8a;">Mes Stages</h2>
+        <p class="section-text">
+          Durant les trois années de BTS SIO il est demandé d’effectuer un stage par an.
+          Le premier se déroule sur 5 semaines de stage. Pour la deuxième année et la troisième année
+          de BTS SIO, il est demandé de faire 7 semaines de stage.
+        </p>
+
+        <div class="stage-detail-layout">
+          <div class="stage-detail-content">
+            <h3 class="stage-main-title">Stage de troisième année - STMicroelectronics</h3>
+            <p class="stage-period"><strong>Période de stage :</strong> 05/01/2026 - 20/02/2026</p>
+            <p class="section-text" style="max-width: 100%;">
+              En troisième année de BTS SIO option SISR, j'ai eu l'opportunité d'effectuer un stage
+              au service infrastructure et système de STMicroelectronics.
+            </p>
+
+            <h4 class="stage-subtitle">Missions</h4>
+            <ul class="stage-missions">
+              <li>STMicroelectronics - Mission 1 - Migration de l’infrastructure réseau du datacenter : remplacement des commutateurs Cisco Catalyst C9400-supp1 par des Cisco Nexus 93108TC-FX3P.</li>
+              <li>STMicroelectronics - Mission 2 - Migration de l’infrastructure réseau : remplacement des Catalyst 9120I access point par des Catalyst 9164I.</li>
+              <li>STMicroelectronics - Mission 3 - Mise en place de firewall pour le réseau datacenter sur le site de Rennes.</li>
+            </ul>
+
+            <h4 class="stage-subtitle">Compétences E5</h4>
+            <ul class="stage-skills">
+              <li>Gérer le patrimoine informatique</li>
+              <li>Travailler en mode projet</li>
+              <li>Mettre à disposition des utilisateurs un service informatique</li>
+            </ul>
+          </div>
+
+          <aside class="stage-side-card">
+            <div class="stage-logo-box">
+              <div class="st-logo">ST</div>
+              <div class="st-logo-sub">STMicroelectronics</div>
+            </div>
+            <a class="btn primary" href="#" target="_blank">Documents du stage</a>
+          </aside>
+        </div>
       </div>
     </section>
 
