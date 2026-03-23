@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -81,6 +80,10 @@
       align-items: center;
     }
 
+    .menu li {
+      position: relative;
+    }
+
     .menu a {
       color: #6b7280;
       font-size: 1.08rem;
@@ -101,96 +104,61 @@
       color: white;
     }
 
+    .has-submenu {
+      position: relative;
+    }
+
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 230px;
+      background: rgba(244, 243, 238, 0.98);
+      border: 1px solid rgba(30, 58, 138, 0.12);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      list-style: none;
+      display: none;
+      flex-direction: column;
+      padding: 8px 0;
+      z-index: 1200;
+    }
+
+    .submenu li {
+      width: 100%;
+    }
+
+    .submenu a {
+      display: block;
+      width: 100%;
+      padding: 12px 18px;
+      font-size: 0.95rem;
+      letter-spacing: 2px;
+      color: #355d8c;
+      background: transparent;
+      white-space: nowrap;
+    }
+
+    .submenu a:hover {
+      background: #355d8c;
+      color: white;
+    }
+
+    .has-submenu:hover .submenu {
+      display: flex;
+    }
+
     .hero {
       padding: 90px 0 70px;
     }
 
-    .hero-home {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 40px;
-      align-items: center;
-      min-height: 70vh;
-    }
-
-
-    .badge {
-      display: inline-block;
-      padding: 8px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(77, 163, 255, 0.08);
-      color: var(--accent-2);
-      margin-bottom: 18px;
-      font-size: 0.92rem;
+    section {
+      padding: 72px 0;
     }
 
     h1 {
       font-size: clamp(2rem, 5vw, 3.4rem);
       line-height: 1.15;
       margin-bottom: 16px;
-    }
-
-    .hero p {
-      color: var(--muted);
-      max-width: 700px;
-      margin-bottom: 24px;
-      font-size: 1.02rem;
-    }
-
-    .actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 16px 24px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: var(--card);
-      color: white;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: 0.2s ease;
-      box-shadow: var(--shadow);
-    }
-
-    .btn.primary {
-      background: linear-gradient(135deg, var(--accent), #2563eb);
-      border: none;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .hero-text h1 {
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      color: #1e3a8a;
-      margin-bottom: 26px;
-    }
-
-    .hero-text p {
-      color: #22304a;
-      font-size: 1.12rem;
-      max-width: 620px;
-      margin-bottom: 22px;
-      line-height: 1.7;
-    }
-
-    .hero-visual {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    
-    section {
-      padding: 72px 0;
     }
 
     .section-title {
@@ -229,9 +197,14 @@
       font-size: 1.6rem;
     }
 
-    .card p, .card li {
+    .card p,
+    .card li {
       color: #374151;
       font-size: 1.15rem;
+    }
+
+    .card ul {
+      padding-left: 18px;
     }
 
     .formation-grid {
@@ -260,30 +233,6 @@
       line-height: 1.9;
     }
 
-    .card ul {
-      padding-left: 18px;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 18px;
-    }
-
-    .timeline-item {
-      border-left: 4px solid var(--accent);
-      padding: 18px 18px 18px 20px;
-      background: var(--card);
-      border-radius: 0 16px 16px 0;
-      box-shadow: var(--shadow);
-    }
-
-    .timeline-item span {
-      display: inline-block;
-      color: var(--accent-2);
-      margin-bottom: 8px;
-      font-weight: 700;
-    }
-
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -300,13 +249,9 @@
 
     footer {
       padding: 28px 0 40px;
-      border-top: 1px solid rgba(30,58,138,0.08);
+      border-top: 1px solid rgba(30, 58, 138, 0.08);
       color: #4b5563;
       text-align: center;
-    }
-
-    .skills-home {
-      padding-top: 20px;
     }
 
     .skills-columns {
@@ -338,28 +283,38 @@
       font-size: 1.22rem;
     }
 
-    .progress-zone {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 30px 0 10px;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 24px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: white;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: 0.2s ease;
+      box-shadow: var(--shadow);
     }
 
-    .progress-title {
-      font-size: 2rem;
-      margin-bottom: 24px;
-      color: #2563eb;
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent), #2563eb);
+      border: none;
     }
 
-    
-    .progress-item span {
-      display: block;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: #111827;
+    .btn:hover {
+      transform: translateY(-2px);
     }
 
-    
-    
+    #bg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      opacity: 0.45;
+    }
+
     @media (max-width: 900px) {
       body {
         font-size: 17px;
@@ -403,6 +358,25 @@
         font-size: 0.95rem;
         letter-spacing: 1.5px;
         border-radius: 10px;
+      }
+
+      .submenu {
+        position: static;
+        display: flex;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+        padding: 0;
+        margin-top: 6px;
+        min-width: 100%;
+      }
+
+      .submenu a {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        background: rgba(53, 93, 140, 0.08);
       }
 
       section {
@@ -497,17 +471,6 @@
         gap: 14px;
       }
     }
-
-      .nav {
-        align-items: flex-start;
-        padding: 14px 0;
-        flex-direction: column;
-      }
-
-      .menu {
-        gap: 12px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -517,7 +480,15 @@
       <ul class="menu">
         <li><a href="#accueil" class="active-link">ACCUEIL</a></li>
         <li><a href="#formation">FORMATION</a></li>
-        <li><a href="#parcours">PARCOURS</a></li>
+
+        <li class="has-submenu">
+          <a href="#parcours">PARCOURS</a>
+          <ul class="submenu">
+            <li><a href="#stages">STAGES</a></li>
+            <li><a href="#certifications">CERTIFICATIONS</a></li>
+          </ul>
+        </li>
+
         <li><a href="#projets">PROJETS</a></li>
         <li><a href="#veille">VEILLE</a></li>
         <li><a href="#contact">CONTACT</a></li>
@@ -569,42 +540,12 @@
             </ul>
           </div>
         </div>
-
-        </div>
-          </div>
-
-          </div>
-          </div>
-
-          </div>
-          </div>
-
-          </div>
-          </div>
-
-          </div>
-          </div>
-
-          </div>
-          </div>
-
-          </div>
-          </div>
-
-          </div>
-          </div>
-
-          </div>
-          </div>
-        </div>
       </div>
     </section>
 
     <section id="formation" class="page-section">
       <div class="container">
-        <h2 class="section-title" style="color:#1e3a8a;">
-  Qu'est ce que le BTS SIO ?
-</h2>
+        <h2 class="section-title" style="color:#1e3a8a;">Qu'est ce que le BTS SIO ?</h2>
         <p class="section-text">
           Le <strong>Brevet de Technicien Supérieur aux Services Informatiques aux Organisations</strong>
           s'adresse à ceux qui souhaitent se former en deux ans aux métiers d'administrateur réseau
@@ -652,41 +593,66 @@
       </div>
     </section>
 
-    <section id="profil" class="page-section">
+    <section id="parcours" class="page-section">
       <div class="container">
-        <h2 class="section-title">Profil & Compétences</h2>
+        <h2 class="section-title">Parcours</h2>
         <p class="section-text">
-          Je m'appelle <strong>Joris Texier</strong>, étudiant en <strong>BTS SIO option SISR</strong>.
+          Retrouvez ici mes stages et mes certifications à travers le sous-menu de la rubrique parcours.
         </p>
+      </div>
+    </section>
 
-        <div class="skills-columns">
-          <div class="skill-box">
-            <h3>Systèmes</h3>
-            <ul>
-              <li>Linux (Kali, Debian, Ubuntu)</li>
-              <li>Windows (Server 2003 à 2019, XP à 11)</li>
-              <li>Mac OS X</li>
-            </ul>
+    <section id="stages" class="page-section">
+      <div class="container">
+        <h2 class="section-title">Stages</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Stage 1</h3>
+            <p>Ajoute ici le nom de l’entreprise, la période et les missions réalisées.</p>
           </div>
-
-          <div class="skill-box">
-            <h3>Réseaux</h3>
-            <ul>
-              <li>DHCP, DNS, Active Directory, VPN</li>
-              <li>VLAN, routage, NAT, ACL</li>
-              <li>Firewall Stormshield</li>
-              <li>Haute disponibilité</li>
-            </ul>
+          <div class="card">
+            <h3>Stage 2</h3>
+            <p>Ajoute ici le nom de l’entreprise, la période et les missions réalisées.</p>
           </div>
-
-          <div class="skill-box">
-            <h3>Scripting</h3>
-            <ul>
-              <li>PowerShell</li>
-              <li>Python</li>
-            </ul>
+          <div class="card">
+            <h3>Stage 3</h3>
+            <p>Ajoute ici le nom de l’entreprise, la période et les missions réalisées.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="page-section">
+      <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Certification 1</h3>
+            <p>Nom de la certification, organisme, année.</p>
+          </div>
+          <div class="card">
+            <h3>Certification 2</h3>
+            <p>Nom de la certification, organisme, année.</p>
+          </div>
+          <div class="card">
+            <h3>Certification 3</h3>
+            <p>Nom de la certification, organisme, année.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="page-section">
+      <div class="container">
+        <h2 class="section-title">Projets</h2>
+        <p class="section-text">Ajoute ici tes projets professionnels ou scolaires.</p>
+      </div>
+    </section>
+
+    <section id="veille" class="page-section">
+      <div class="container">
+        <h2 class="section-title">Veille</h2>
+        <p class="section-text">Ajoute ici ta veille technologique.</p>
       </div>
     </section>
 
@@ -709,8 +675,16 @@
     </section>
   </main>
 
+  <footer>
+    <div class="container">
+      <p>© 2026 - Joris Texier - Portfolio BTS SIO SISR</p>
+    </div>
+  </footer>
+
+  <canvas id="bg-canvas"></canvas>
+
   <script>
-    const navLinks = document.querySelectorAll('.menu a');
+    const navLinks = document.querySelectorAll('.menu a, .submenu a');
     const sections = document.querySelectorAll('.page-section');
 
     function showSection(sectionId) {
@@ -718,20 +692,25 @@
         section.classList.remove('active-section');
       });
 
-      navLinks.forEach(link => {
+      document.querySelectorAll('.menu a').forEach(link => {
         link.classList.remove('active-link');
       });
 
       const target = document.querySelector(sectionId);
-      const activeLink = document.querySelector(`.menu a[href="${sectionId}"]`);
+      const directLink = document.querySelector(`.menu > li > a[href="${sectionId}"]`);
+      const submenuLink = document.querySelector(`.submenu a[href="${sectionId}"]`);
 
       if (target) {
         target.classList.add('active-section');
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
-      if (activeLink) {
-        activeLink.classList.add('active-link');
+      if (directLink) {
+        directLink.classList.add('active-link');
+      }
+
+      if (submenuLink) {
+        submenuLink.closest('.has-submenu').querySelector('a').classList.add('active-link');
       }
     }
 
@@ -745,13 +724,6 @@
       });
     });
   </script>
-
-  <footer>
-    <div class="container">
-      <p>© 2026 - Joris Texier - Portfolio BTS SIO SISR</p>
-    </div>
-  </footer>
-  <canvas id="bg-canvas"></canvas>
 
   <script>
     const canvas = document.getElementById('bg-canvas');
@@ -811,15 +783,5 @@
       canvas.height = window.innerHeight;
     });
   </script>
-
-  <style>
-    #bg-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      opacity: 0.45;
-    }
-  </style>
 </body>
 </html>
