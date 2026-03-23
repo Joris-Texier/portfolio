@@ -457,26 +457,18 @@
       border: 1px solid #e5e7eb;
       border-radius: 14px;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+      padding: 20px;
     }
 
-    .st-logo {
-      font-size: 5rem;
-      font-weight: 800;
-      line-height: 1;
-      color: #0f766e;
-      letter-spacing: -6px;
-    }
-
-    .st-logo-sub {
-      margin-top: 10px;
-      color: #374151;
-      font-size: 1.15rem;
-      text-align: center;
-      font-weight: 700;
+    .stage-logo-box img {
+      max-width: 100%;
+      max-height: 180px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
     }
 
     footer {
@@ -886,10 +878,9 @@
           </div>
 
           <aside class="stage-side-card">
-            <div class="stage-logo-box">
-              <div class="st-logo">ST</div>
-              <div class="st-logo-sub">STMicroelectronics</div>
-            </div>
+           <div class="stage-logo-box">
+  <img src="images/st-logo.jpg" alt="STMicroelectronics">
+</div>
             <a class="btn primary" href="#" target="_blank">Documents du stage</a>
           </aside>
         </div>
