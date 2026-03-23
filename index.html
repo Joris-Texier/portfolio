@@ -247,13 +247,6 @@
       display: block;
     }
 
-    footer {
-      padding: 28px 0 40px;
-      border-top: 1px solid rgba(30, 58, 138, 0.08);
-      color: #4b5563;
-      text-align: center;
-    }
-
     .skills-columns {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -305,6 +298,79 @@
 
     .btn:hover {
       transform: translateY(-2px);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .timeline-item {
+      background: white;
+      border: 1px solid #dbe3ef;
+      border-left: 6px solid #355d8c;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .timeline-item h3 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      color: #1e3a8a;
+    }
+
+    .timeline-meta {
+      font-weight: 700;
+      color: #355d8c;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item ul {
+      padding-left: 22px;
+      margin-top: 10px;
+    }
+
+    .timeline-item li {
+      color: #374151;
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+    }
+
+    .parcours-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 28px;
+      margin-bottom: 34px;
+    }
+
+    .parcours-box {
+      background: white;
+      border: 1px solid #dbe3ef;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .parcours-box h3 {
+      color: #1e3a8a;
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+    }
+
+    .parcours-box p {
+      color: #374151;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      padding: 28px 0 40px;
+      border-top: 1px solid rgba(30, 58, 138, 0.08);
+      color: #4b5563;
+      text-align: center;
     }
 
     #bg-canvas {
@@ -385,7 +451,8 @@
 
       .cards,
       .grid-2,
-      .skills-columns {
+      .skills-columns,
+      .parcours-grid {
         grid-template-columns: 1fr;
       }
 
@@ -408,17 +475,23 @@
         padding-left: 22px;
       }
 
-      .card {
+      .card,
+      .timeline-item,
+      .parcours-box {
         padding: 18px;
       }
 
-      .card h3 {
+      .card h3,
+      .timeline-item h3,
+      .parcours-box h3 {
         font-size: 1.35rem;
       }
 
       .card p,
       .card li,
-      .section-text {
+      .section-text,
+      .timeline-item li,
+      .parcours-box p {
         font-size: 1rem;
       }
 
@@ -595,28 +668,98 @@
 
     <section id="parcours" class="page-section">
       <div class="container">
-        <h2 class="section-title">Parcours</h2>
+        <h2 class="section-title" style="color:#1e3a8a;">Parcours</h2>
         <p class="section-text">
-          Retrouvez ici mes stages et mes certifications à travers le sous-menu de la rubrique parcours.
+          Cette page présente mon parcours scolaire ainsi que mes expériences professionnelles réalisées durant ma formation.
         </p>
+
+        <div class="parcours-grid">
+          <div class="parcours-box">
+            <h3>Études supérieures</h3>
+            <p><strong>2023 - 2026</strong></p>
+            <p>BTS SIO Option SISR</p>
+            <p>Lycée Paul Louis Courier, 37000 - Tours</p>
+          </div>
+
+          <div class="parcours-box">
+            <h3>Lycée</h3>
+            <p><strong>2020 - 2023</strong></p>
+            <p>Bac Pro Système Numérique option RISC</p>
+            <p>(Système Numérique - Réseaux Informatiques et Systèmes Communicants)</p>
+            <p>Lycée Thérèse Planiol, 37600 - Loches</p>
+            <p>Admis mention assez bien</p>
+          </div>
+        </div>
+
+        <h2 class="section-title" style="color:#1e3a8a; margin-top: 20px;">Expériences professionnelles</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Stage de 3ème année de BTS SIO</h3>
+            <div class="timeline-meta">05/01/2026 - 20/02/2026 | STMicroelectronics</div>
+            <ul>
+              <li>Migration de l’infrastructure réseau du datacenter : remplacement des commutateurs Cisco Catalyst C9400-supp1 par des Cisco Nexus 93108TC-FX3P.</li>
+              <li>Migration de l’infrastructure réseau : remplacement des Catalyst 9120I access point par des Catalyst 9164I.</li>
+              <li>Mise en place de firewall pour le réseau datacenter sur le site de Rennes.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Stage de 2ème année de BTS SIO</h3>
+            <div class="timeline-meta">06/01/2025 - 14/02/2025 | DGFIP</div>
+            <ul>
+              <li>Installation et configuration de Docker avec Zabbix, Joplin Server et Portainer.</li>
+              <li>Mise en place d’un système de sauvegarde et de monitoring avancé pour les conteneurs Docker.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Stage de 1ère année de BTS SIO</h3>
+            <div class="timeline-meta">21/05/2024 - 26/06/2024 | Audilab</div>
+            <ul>
+              <li>Gestion administrative d'une base de données sur Clarilog, mise à jour des données des utilisateurs.</li>
+              <li>Mise en place d’un rapport mensuel concernant l’usage d’Internet à l’aide de la solution Cisco Meraki.</li>
+              <li>Simulation de phishing avec l’outil Mailinblack pour évaluer la vulnérabilité des employés et sensibiliser aux cybermenaces.</li>
+              <li>Gestion des groupes et utilisateurs d’un Active Directory.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="stages" class="page-section">
       <div class="container">
-        <h2 class="section-title">Stages</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>Stage 1</h3>
-            <p>Ajoute ici le nom de l’entreprise, la période et les missions réalisées.</p>
+        <h2 class="section-title" style="color:#1e3a8a;">Stages</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Stage de 3ème année de BTS SIO</h3>
+            <div class="timeline-meta">05/01/2026 - 20/02/2026 | STMicroelectronics</div>
+            <ul>
+              <li>Migration de l’infrastructure réseau du datacenter : remplacement des commutateurs Cisco Catalyst C9400-supp1 par des Cisco Nexus 93108TC-FX3P.</li>
+              <li>Migration de l’infrastructure réseau : remplacement des Catalyst 9120I access point par des Catalyst 9164I.</li>
+              <li>Mise en place de firewall pour le réseau datacenter sur le site de Rennes.</li>
+            </ul>
           </div>
-          <div class="card">
-            <h3>Stage 2</h3>
-            <p>Ajoute ici le nom de l’entreprise, la période et les missions réalisées.</p>
+
+          <div class="timeline-item">
+            <h3>Stage de 2ème année de BTS SIO</h3>
+            <div class="timeline-meta">06/01/2025 - 14/02/2025 | DGFIP</div>
+            <ul>
+              <li>Installation et configuration de Docker avec Zabbix, Joplin Server et Portainer.</li>
+              <li>Mise en place d’un système de sauvegarde et de monitoring avancé pour les conteneurs Docker.</li>
+            </ul>
           </div>
-          <div class="card">
-            <h3>Stage 3</h3>
-            <p>Ajoute ici le nom de l’entreprise, la période et les missions réalisées.</p>
+
+          <div class="timeline-item">
+            <h3>Stage de 1ère année de BTS SIO</h3>
+            <div class="timeline-meta">21/05/2024 - 26/06/2024 | Audilab</div>
+            <ul>
+              <li>Gestion administrative d'une base de données sur Clarilog, mise à jour des données des utilisateurs.</li>
+              <li>Mise en place d’un rapport mensuel concernant l’usage d’Internet à l’aide de la solution Cisco Meraki.</li>
+              <li>Simulation de phishing avec l’outil Mailinblack pour évaluer la vulnérabilité des employés et sensibiliser aux cybermenaces.</li>
+              <li>Gestion des groupes et utilisateurs d’un Active Directory.</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -624,19 +767,19 @@
 
     <section id="certifications" class="page-section">
       <div class="container">
-        <h2 class="section-title">Certifications</h2>
+        <h2 class="section-title" style="color:#1e3a8a;">Certifications</h2>
         <div class="cards">
           <div class="card">
             <h3>Certification 1</h3>
-            <p>Nom de la certification, organisme, année.</p>
+            <p>Ajoute ici le nom de la certification, l’organisme et l’année.</p>
           </div>
           <div class="card">
             <h3>Certification 2</h3>
-            <p>Nom de la certification, organisme, année.</p>
+            <p>Ajoute ici le nom de la certification, l’organisme et l’année.</p>
           </div>
           <div class="card">
             <h3>Certification 3</h3>
-            <p>Nom de la certification, organisme, année.</p>
+            <p>Ajoute ici le nom de la certification, l’organisme et l’année.</p>
           </div>
         </div>
       </div>
