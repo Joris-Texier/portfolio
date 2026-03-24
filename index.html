@@ -637,7 +637,6 @@
       object-fit: contain;
     }
 
-    /* Images cliquables */
     .zoomable-image {
       cursor: zoom-in;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -648,7 +647,6 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
-    /* Modal image */
     .image-modal {
       position: fixed;
       inset: 0;
@@ -849,10 +847,6 @@
         max-height: 300px;
       }
 
-      .project-subtitle {
-        font-size: 1.4rem;
-      }
-
       footer {
         font-size: 0.95rem;
       }
@@ -924,7 +918,14 @@
           </ul>
         </li>
 
-        <li><a href="#projets">PROJETS</a></li>
+        <li class="has-submenu">
+          <a href="#projets">PROJETS</a>
+          <ul class="submenu">
+            <li><a href="#ap">AP</a></li>
+            <li><a href="#cub">CUB</a></li>
+          </ul>
+        </li>
+
         <li><a href="#veille">VEILLE</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
@@ -1377,6 +1378,26 @@
       </div>
     </section>
 
+    <section id="ap" class="page-section">
+      <div class="container">
+        <div class="certif-title-wrap">
+          <h2>AP</h2>
+          <div class="certif-title-line"></div>
+        </div>
+        <p class="section-text">Cette page est vide pour le moment.</p>
+      </div>
+    </section>
+
+    <section id="cub" class="page-section">
+      <div class="container">
+        <div class="certif-title-wrap">
+          <h2>CUB</h2>
+          <div class="certif-title-line"></div>
+        </div>
+        <p class="section-text">Cette page est vide pour le moment.</p>
+      </div>
+    </section>
+
     <section id="veille" class="page-section">
       <div class="container">
         <h2 class="section-title">Veille</h2>
@@ -1411,7 +1432,6 @@
 
   <canvas id="bg-canvas"></canvas>
 
-  <!-- Modal image -->
   <div class="image-modal" id="imageModal">
     <button class="image-modal-close" id="closeImageModal" aria-label="Fermer">×</button>
     <img id="modalImage" class="image-modal-content" src="" alt="">
@@ -1461,7 +1481,6 @@
   </script>
 
   <script>
-    // Ouvrir docs/pdf dans une popup
     const docLinks = document.querySelectorAll('.external-doc');
 
     docLinks.forEach(link => {
@@ -1476,7 +1495,6 @@
       });
     });
 
-    // Modal pour toutes les images
     const imageModal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
     const modalCaption = document.getElementById('modalCaption');
