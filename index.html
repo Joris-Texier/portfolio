@@ -528,20 +528,6 @@
       max-width: 620px;
     }
 
-    .certif-content p strong {
-      color: #111827;
-    }
-
-    .certif-competence {
-      font-size: 0.95rem;
-      color: #6b7280;
-      margin-bottom: 18px;
-    }
-
-    .certif-competence strong {
-      color: #111827;
-    }
-
     .certif-logo {
       display: flex;
       justify-content: center;
@@ -568,6 +554,87 @@
       width: auto;
       min-width: 150px;
       max-width: 220px;
+    }
+
+    /* PROJETS */
+    .project-intro {
+      max-width: 860px;
+      margin: 0 auto 34px;
+      text-align: left;
+    }
+
+    .project-intro p {
+      color: #374151;
+      font-size: 1.08rem;
+      margin-bottom: 14px;
+    }
+
+    .project-subtitle {
+      color: #1e3a8a;
+      font-size: 1.7rem;
+      margin: 28px 0 18px;
+      text-align: left;
+    }
+
+    .project-methods {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin: 22px 0 42px;
+    }
+
+    .project-method-card {
+      background: white;
+      border: 1px solid #dbe3ef;
+      border-radius: 16px;
+      padding: 22px 18px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+      text-align: center;
+    }
+
+    .project-method-card h3 {
+      color: #111827;
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+    }
+
+    .project-method-btn {
+      width: auto;
+      min-width: 120px;
+      padding: 12px 18px;
+      font-size: 0.95rem;
+      margin: 0 auto;
+    }
+
+    .project-notion-block {
+      margin-top: 10px;
+      background: rgba(255,255,255,0.35);
+      border: 1px solid #dbe3ef;
+      border-radius: 16px;
+      padding: 26px;
+    }
+
+    .project-notion-text {
+      color: #374151;
+      font-size: 1.08rem;
+      margin-bottom: 18px;
+    }
+
+    .project-image-wrap {
+      margin-top: 18px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+    }
+
+    .project-image-wrap img {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 10px;
+      object-fit: contain;
     }
 
     footer {
@@ -658,7 +725,8 @@
       .skills-columns,
       .parcours-layout,
       .stage-detail-layout,
-      .certif-layout {
+      .certif-layout,
+      .project-methods {
         grid-template-columns: 1fr;
       }
 
@@ -696,7 +764,9 @@
       .card li,
       .section-text,
       .parcours-card p,
-      .certif-content p {
+      .certif-content p,
+      .project-intro p,
+      .project-notion-text {
         font-size: 1rem;
       }
 
@@ -711,6 +781,10 @@
       .certif-logo-ethical img {
         max-width: 450px;
         max-height: 300px;
+      }
+
+      .project-subtitle {
+        font-size: 1.4rem;
       }
 
       footer {
@@ -1179,8 +1253,61 @@
 
     <section id="projets" class="page-section">
       <div class="container">
-        <h2 class="section-title">Projets</h2>
-        <p class="section-text">Ajoute ici tes projets professionnels ou scolaires.</p>
+        <div class="certif-title-wrap">
+          <h2>Gestion de Projet</h2>
+          <div class="certif-title-line"></div>
+        </div>
+
+        <div class="project-intro">
+          <p>
+            La gestion de projet, ou le management de projet, consiste à organiser le déroulement d’un projet
+            de A à Z, de sa phase de conception à sa phase finale. Pour ce faire, il faut définir les objectifs,
+            les ressources humaines et matérielles nécessaires, le budget, les délais et les contraintes éventuelles.
+          </p>
+        </div>
+
+        <h3 class="project-subtitle">Les méthodes de gestion de projet :</h3>
+
+        <div class="project-methods">
+          <div class="project-method-card">
+            <h3>Méthode Cascade</h3>
+            <a class="btn primary project-method-btn" href="#">Voir plus</a>
+          </div>
+
+          <div class="project-method-card">
+            <h3>Méthode Agile</h3>
+            <a class="btn primary project-method-btn" href="#">Voir plus</a>
+          </div>
+
+          <div class="project-method-card">
+            <h3>Méthode PERT</h3>
+            <a class="btn primary project-method-btn" href="#">Voir plus</a>
+          </div>
+
+          <div class="project-method-card">
+            <h3>Méthode Scrum</h3>
+            <a class="btn primary project-method-btn" href="#">Voir plus</a>
+          </div>
+        </div>
+
+        <div class="project-notion-block">
+          <h3 class="project-subtitle" style="margin-top:0;">Notion :</h3>
+          <p class="project-notion-text">
+            Durant la troisième année nous avons utilisé Notion, avec la méthode Agile. Notion est un outil
+            de gestion de projet en ligne qui peut être utilisé avec diverses méthodes de gestion de projet,
+            comme Scrum et d'autres approches agiles.
+          </p>
+          <p class="project-notion-text">
+            Il offre une plateforme visuelle où les utilisateurs peuvent organiser leurs tâches sous forme de cartes,
+            les déplacer entre différentes colonnes représentant différents états du flux de travail, et collaborer
+            avec leur équipe en temps réel.
+          </p>
+
+          <h3 class="project-subtitle">Interface Notion :</h3>
+          <div class="project-image-wrap">
+            <img src="images/notion-gestion-projet.png" alt="Interface Notion">
+          </div>
+        </div>
       </div>
     </section>
 
