@@ -480,6 +480,88 @@
       margin: 42px 0;
     }
 
+    .certif-title-wrap {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .certif-title-wrap h2 {
+      color: #1e3a8a;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .certif-title-line {
+      width: 170px;
+      height: 3px;
+      background: #355d8c;
+      margin: 0 auto;
+      border-radius: 999px;
+    }
+
+    .certif-block {
+      padding: 36px 0;
+      border-bottom: 1px solid #d7dde8;
+    }
+
+    .certif-block:last-child {
+      border-bottom: none;
+    }
+
+    .certif-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .certif-content h3 {
+      font-size: 2rem;
+      color: #111827;
+      margin-bottom: 14px;
+    }
+
+    .certif-content p {
+      color: #374151;
+      font-size: 1.08rem;
+      margin-bottom: 18px;
+      max-width: 620px;
+    }
+
+    .certif-content p strong {
+      color: #111827;
+    }
+
+    .certif-competence {
+      font-size: 0.95rem;
+      color: #6b7280;
+      margin-bottom: 18px;
+    }
+
+    .certif-competence strong {
+      color: #111827;
+    }
+
+    .certif-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .certif-logo img {
+      max-width: 240px;
+      max-height: 150px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .certif-btn {
+      width: auto;
+      min-width: 150px;
+      max-width: 220px;
+    }
+
     footer {
       padding: 28px 0 40px;
       border-top: 1px solid rgba(30, 58, 138, 0.08);
@@ -567,7 +649,8 @@
       .grid-2,
       .skills-columns,
       .parcours-layout,
-      .stage-detail-layout {
+      .stage-detail-layout,
+      .certif-layout {
         grid-template-columns: 1fr;
       }
 
@@ -596,19 +679,25 @@
       }
 
       .card h3,
-      .parcours-column h3 {
+      .parcours-column h3,
+      .certif-content h3 {
         font-size: 1.35rem;
       }
 
       .card p,
       .card li,
       .section-text,
-      .parcours-card p {
+      .parcours-card p,
+      .certif-content p {
         font-size: 1rem;
       }
 
       .btn {
         max-width: 320px;
+      }
+
+      .certif-logo {
+        justify-content: flex-start;
       }
 
       footer {
@@ -653,6 +742,10 @@
 
       .grid-2 {
         gap: 14px;
+      }
+
+      .certif-title-wrap h2 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -934,7 +1027,7 @@
         <div class="stage-detail-layout">
           <div class="stage-detail-content">
             <h3 class="stage-main-title">Stage de première année - Audilab</h3>
-            <p class="stage-period"><strong>Période de stage :</strong>21/05/2024 - 26/06/2024</p>
+            <p class="stage-period"><strong>Période de stage :</strong> 21/05/2024 - 26/06/2024</p>
             <p class="section-text" style="max-width: 100%;">
               En première année de BTS SIO option SISR, j'ai eu l'opportunité d'effectuer un stage
               au service infrastructure à Audilab.
@@ -968,19 +1061,95 @@
 
     <section id="certifications" class="page-section">
       <div class="container">
-        <h2 class="section-title" style="color:#1e3a8a;">Certifications</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>Certification 1</h3>
-            <p>Ajoute ici le nom de la certification, l’organisme et l’année.</p>
+        <div class="certif-title-wrap">
+          <h2>Certifications</h2>
+          <div class="certif-title-line"></div>
+        </div>
+
+        <div class="certif-block">
+          <div class="certif-layout">
+            <div class="certif-content">
+              <h3>ANSSI Cybersécurité</h3>
+              <p>
+                Le MOOC de l’ANSSI est un cours gratuit en ligne sur la cybersécurité. Il couvre la
+                sécurisation des réseaux, la cryptographie, et la législation. Un certificat est délivré à la fin.
+              </p>
+              <p>
+                Ce MOOC m’a permis d’approfondir mes connaissances sur la sécurité des réseaux, la
+                cryptographie et la législation, me permettant de mieux protéger les infrastructures et
+                de sensibiliser les utilisateurs aux menaces.
+              </p>
+              <a class="btn primary certif-btn" href="#" target="_blank">Certification</a>
+            </div>
+            <div class="certif-logo">
+              <img src="images/anssi-logo.png" alt="Logo ANSSI">
+            </div>
           </div>
-          <div class="card">
-            <h3>Certification 2</h3>
-            <p>Ajoute ici le nom de la certification, l’organisme et l’année.</p>
+        </div>
+
+        <div class="certif-block">
+          <div class="certif-layout">
+            <div class="certif-content">
+              <h3>Cisco : Introduction réseau (CCNAv7)</h3>
+              <p>
+                Le CCNAv7 (Cisco Certified Network Associate version 7) est une certification Cisco
+                qui valide les compétences de base en réseau, compris les protocoles IP, la sécurité,
+                et l’automatisation.
+              </p>
+              <p>
+                Cette certification m’a permis d’acquérir des bases solides en réseau, notamment sur
+                les protocoles IP, la sécurité et l’automatisation, ce qui est essentiel pour gérer
+                efficacement le patrimoine informatique et répondre aux incidents réseau.
+              </p>
+              <a class="btn primary certif-btn" href="#" target="_blank">Certification</a>
+            </div>
+            <div class="certif-logo">
+              <img src="images/cisco-logo.png" alt="Logo Cisco">
+            </div>
           </div>
-          <div class="card">
-            <h3>Certification 3</h3>
-            <p>Ajoute ici le nom de la certification, l’organisme et l’année.</p>
+        </div>
+
+        <div class="certif-block">
+          <div class="certif-layout">
+            <div class="certif-content">
+              <h3>Notions de bases sur les réseau</h3>
+              <p>
+                La certification "Notions de base sur les réseaux" par NetAcad est le premier module
+                du cursus CCNA. Elle introduit les concepts fondamentaux des réseaux informatiques,
+                préparant les étudiants aux rôles d'Administrateur Réseau ou Ingénieur Réseau.
+              </p>
+              <p>
+                Le cursus complet inclut plusieurs modules sur la commutation, le routage, et les
+                réseaux sans fil, avec un examen final pour obtenir la certification.
+              </p>
+              <a class="btn primary certif-btn" href="#" target="_blank">Certification</a>
+            </div>
+            <div class="certif-logo">
+              <img src="images/cisco-logo.png" alt="Logo Cisco">
+            </div>
+          </div>
+        </div>
+
+        <div class="certif-block">
+          <div class="certif-layout">
+            <div class="certif-content">
+              <h3>Ethical hacker</h3>
+              <p>
+                La certification "Ethical Hacker" de NetAcad est conçue pour former des professionnels
+                capables de tester et de sécuriser les systèmes informatiques en adoptant une approche offensive.
+              </p>
+              <p>
+                Ce cours gratuit en ligne de 70 heures prépare les apprenants aux rôles de testeur de
+                pénétration et d’analyste en cybersécurité. Il inclut des laboratoires pratiques et des
+                scénarios réels pour comprendre les tactiques des cybercriminels et renforcer les défenses
+                des réseaux. Les participants peuvent obtenir un certificat et un badge numérique en réussissant
+                l’examen final et un défi "Capture the Flag".
+              </p>
+              <a class="btn primary certif-btn" href="#" target="_blank">Certification</a>
+            </div>
+            <div class="certif-logo">
+              <img src="images/ethical-hacker.jpg" alt="Certification Ethical Hacker">
+            </div>
           </div>
         </div>
       </div>
