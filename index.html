@@ -732,6 +732,140 @@
       line-height: 1.9;
     }
 
+    /* AP */
+    .ap-intro {
+      max-width: 980px;
+      margin: 0 auto 40px;
+      text-align: left;
+      background: rgba(255,255,255,0.35);
+      border: 1px solid #dbe3ef;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+    }
+
+    .ap-intro p {
+      color: #374151;
+      font-size: 1.12rem;
+      margin-bottom: 0;
+    }
+
+    .ap-block {
+      padding: 36px 0;
+      border-bottom: 1px solid #d7dde8;
+    }
+
+    .ap-block:last-child {
+      border-bottom: none;
+    }
+
+    .ap-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .ap-content h3 {
+      font-size: 2rem;
+      color: #111827;
+      margin-bottom: 14px;
+    }
+
+    .ap-content p {
+      color: #374151;
+      font-size: 1.08rem;
+      margin-bottom: 18px;
+      max-width: 680px;
+    }
+
+    .ap-image-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+    }
+
+    .ap-image-box img {
+      width: 100%;
+      max-width: 360px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .ap-missions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 10px;
+    }
+
+    .ap-mission-card {
+      background: white;
+      border: 1px solid #dbe3ef;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .ap-mission-card h3 {
+      color: #1e3a8a;
+      font-size: 1.4rem;
+      margin-bottom: 0;
+    }
+
+    .ap-mission-card p {
+      color: #374151;
+      font-size: 1.02rem;
+      margin-bottom: 0;
+    }
+
+    .ap-mission-logo {
+      width: 100%;
+      min-height: 120px;
+      background: rgba(244,243,238,0.7);
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .ap-mission-logo img {
+      max-width: 140px;
+      max-height: 80px;
+      object-fit: contain;
+    }
+
+    .ap-e5-box {
+      margin-top: 34px;
+      padding: 24px 26px;
+      background: rgba(255,255,255,0.55);
+      border: 1px solid #dbe3ef;
+      border-radius: 16px;
+    }
+
+    .ap-e5-box h3 {
+      color: #1e3a8a;
+      font-size: 1.45rem;
+      margin-bottom: 12px;
+    }
+
+    .ap-e5-box ul {
+      padding-left: 28px;
+      color: #374151;
+      font-size: 1.08rem;
+      line-height: 1.9;
+    }
+
     .zoomable-image {
       cursor: zoom-in;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -886,7 +1020,9 @@
       .stage-detail-layout,
       .certif-layout,
       .project-methods,
-      .cub-layout {
+      .cub-layout,
+      .ap-layout,
+      .ap-missions-grid {
         grid-template-columns: 1fr;
       }
 
@@ -917,7 +1053,8 @@
       .card h3,
       .parcours-column h3,
       .certif-content h3,
-      .cub-content h3 {
+      .cub-content h3,
+      .ap-content h3 {
         font-size: 1.35rem;
       }
 
@@ -928,7 +1065,9 @@
       .certif-content p,
       .project-intro p,
       .project-notion-text,
-      .cub-content p {
+      .cub-content p,
+      .ap-content p,
+      .ap-intro p {
         font-size: 1rem;
       }
 
@@ -937,7 +1076,8 @@
       }
 
       .certif-logo,
-      .cub-image-box {
+      .cub-image-box,
+      .ap-image-box {
         justify-content: flex-start;
       }
 
@@ -1492,7 +1632,76 @@
           <h2>AP</h2>
           <div class="certif-title-line"></div>
         </div>
-        <p class="section-text">Cette page est vide pour le moment.</p>
+
+        <div class="ap-intro">
+          <p>
+            Bienvenue dans mon espace de réalisations. Vous trouverez ici une sélection d'activités et de projets menés durant mes trois années de BTS SIO. Ces travaux illustrent ma maîtrise technique et ma capacité à déployer des solutions numériques performantes et adaptées.
+          </p>
+        </div>
+
+        <div class="ap-block">
+          <div class="ap-layout">
+            <div class="ap-content">
+              <h3>Présentation du contexte Start@Dev</h3>
+              <p>
+                InfoDev ICT est une entreprise de services numériques spécialisée dans le développement d’applications et la mise en place de réseaux informatiques.
+              </p>
+              <p>
+                Dans une démarche de modernisation, l’entreprise souhaitait actualiser l’apparence de son site web afin de le rendre plus attractif et conforme aux standards actuels.
+              </p>
+              <p>
+                Dans le cadre des ateliers de professionnalisation de ma première année de BTS SIO, nous avons travaillé sur ce besoin en utilisant WordPress, choisi pour sa simplicité d’administration et sa capacité à répondre efficacement aux attentes de l’entreprise. Cette mission nous a permis de comprendre les enjeux d’une refonte web et d’apprendre à manipuler un CMS pour proposer une interface plus moderne et adaptée aux utilisateurs.
+              </p>
+            </div>
+
+            <div class="ap-image-box">
+              <img class="zoomable-image" src="images/startdev.png" alt="Logo Start@Dev">
+            </div>
+          </div>
+        </div>
+
+        <div class="ap-block">
+          <h3 class="project-subtitle" style="margin-top:0;">Missions réalisées - premier semestre de première année</h3>
+
+          <div class="ap-missions-grid">
+            <div class="ap-mission-card">
+              <h3>Start@Dev - Mission 1</h3>
+              <p><strong>Comparatif CMS</strong></p>
+              <a class="btn primary external-doc" href="#">Documentation mission 1</a>
+            </div>
+
+            <div class="ap-mission-card">
+              <h3>Start@Dev - Mission 2</h3>
+              <p><strong>Installation et paramétrage de WordPress</strong></p>
+              <div class="ap-mission-logo">
+                <img class="zoomable-image" src="images/wordpress.png" alt="Logo WordPress">
+              </div>
+              <a class="btn primary external-doc" href="#">Documentation mission 2</a>
+            </div>
+
+            <div class="ap-mission-card">
+              <h3>Start@Dev - Mission 3</h3>
+              <p><strong>Étude d'un site existant</strong></p>
+              <a class="btn primary external-doc" href="#">Documentation mission 3</a>
+            </div>
+
+            <div class="ap-mission-card">
+              <h3>Start@Dev - Mission 4</h3>
+              <p><strong>AC-Blanqui</strong></p>
+              <a class="btn primary external-doc" href="#">Documentation mission 4</a>
+            </div>
+          </div>
+
+          <div class="ap-e5-box">
+            <h3>Compétences E5</h3>
+            <ul>
+              <li>Gérer le patrimoine informatique</li>
+              <li>Développer la présence en ligne de l’organisation</li>
+              <li>Travailler en mode projet</li>
+              <li>Mettre à disposition des utilisateurs un service informatique</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
