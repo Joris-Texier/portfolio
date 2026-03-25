@@ -637,6 +637,101 @@
       object-fit: contain;
     }
 
+    /* CUB */
+    .cub-block {
+      padding: 36px 0;
+      border-bottom: 1px solid #d7dde8;
+    }
+
+    .cub-block:last-child {
+      border-bottom: none;
+    }
+
+    .cub-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .cub-content h3 {
+      font-size: 2rem;
+      color: #111827;
+      margin-bottom: 14px;
+    }
+
+    .cub-content p {
+      color: #374151;
+      font-size: 1.08rem;
+      margin-bottom: 18px;
+      max-width: 620px;
+    }
+
+    .cub-doc-box {
+      margin-top: 20px;
+    }
+
+    .cub-doc-box p {
+      margin-bottom: 12px;
+    }
+
+    .cub-image-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+    }
+
+    .cub-image-box img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    .cub-large-image {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+      margin-top: 18px;
+    }
+
+    .cub-large-image img {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    .cub-competence-box {
+      margin-top: 18px;
+      padding: 20px 22px;
+      background: rgba(255,255,255,0.55);
+      border: 1px solid #dbe3ef;
+      border-radius: 14px;
+    }
+
+    .cub-competence-box p {
+      font-weight: 700;
+      color: #1e3a8a;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .cub-competence-box ul {
+      padding-left: 24px;
+      color: #374151;
+      font-size: 1.05rem;
+      line-height: 1.9;
+    }
+
     .zoomable-image {
       cursor: zoom-in;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -790,7 +885,8 @@
       .parcours-layout,
       .stage-detail-layout,
       .certif-layout,
-      .project-methods {
+      .project-methods,
+      .cub-layout {
         grid-template-columns: 1fr;
       }
 
@@ -820,7 +916,8 @@
 
       .card h3,
       .parcours-column h3,
-      .certif-content h3 {
+      .certif-content h3,
+      .cub-content h3 {
         font-size: 1.35rem;
       }
 
@@ -830,7 +927,8 @@
       .parcours-card p,
       .certif-content p,
       .project-intro p,
-      .project-notion-text {
+      .project-notion-text,
+      .cub-content p {
         font-size: 1rem;
       }
 
@@ -838,7 +936,8 @@
         max-width: 320px;
       }
 
-      .certif-logo {
+      .certif-logo,
+      .cub-image-box {
         justify-content: flex-start;
       }
 
@@ -1400,10 +1499,89 @@
     <section id="cub" class="page-section">
       <div class="container">
         <div class="certif-title-wrap">
-          <h2>CUB</h2>
+          <h2>Contexte CUB</h2>
           <div class="certif-title-line"></div>
         </div>
-        <p class="section-text">Cette page est vide pour le moment.</p>
+
+        <div class="cub-block">
+          <div class="cub-layout">
+            <div class="cub-content">
+              <p>
+                Durant toute ma deuxième année, j’ai évolué au sein de l’environnement CUB, une
+                mise en situation professionnelle conçue pour simuler les réalités du monde de
+                l’informatique.
+              </p>
+              <p>
+                Ce contexte m’a permis de donner du sens à mes apprentissages en les appliquant à
+                des problématiques concrètes d’infrastructure et de sécurité. Cette expérience a
+                été déterminante dans ma capacité à diagnostiquer des pannes, sécuriser des accès
+                et administrer des systèmes performants.
+              </p>
+
+              <div class="cub-doc-box">
+                <a class="btn primary certif-btn external-doc" href="#">En savoir +</a>
+              </div>
+
+              <div class="cub-doc-box">
+                <p>
+                  Afin de regrouper toutes les activités réalisées, nous avons élaboré une
+                  documentation en ligne, disponible en libre consultation sur notre GitHub.
+                </p>
+                <a class="btn primary certif-btn external-doc" href="#">Documentation en ligne</a>
+              </div>
+
+              <div class="cub-competence-box">
+                <p>Compétence :</p>
+                <ul>
+                  <li>Développer la présence en ligne de l’organisation</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="cub-image-box">
+              <img class="zoomable-image" src="images/cub-logo.png" alt="Illustration du contexte CUB">
+            </div>
+          </div>
+        </div>
+
+        <div class="cub-block">
+          <div class="cub-content">
+            <p>
+              Dans le cadre du projet d’infrastructure CUB, mon binôme et moi avons été chargés du
+              déploiement de l’agence <strong>Anvers</strong>. Le schéma réseau ci-dessous détaille
+              l’architecture entière regroupant tous les groupes de la classe.
+            </p>
+          </div>
+
+          <div class="cub-large-image">
+            <img class="zoomable-image" src="images/cub-schema-global.png" alt="Schéma réseau global du projet CUB">
+          </div>
+        </div>
+
+        <div class="cub-block">
+          <div class="cub-content">
+            <p>
+              Voici un <strong>plan de notre réseau Anvers</strong> au lancement réalisé sur Cisco
+              Packet Tracer.
+            </p>
+          </div>
+
+          <div class="cub-large-image">
+            <img class="zoomable-image" src="images/cub-plan-initial.png" alt="Plan initial du réseau Anvers">
+          </div>
+        </div>
+
+        <div class="cub-block">
+          <div class="cub-content">
+            <p>
+              Puis le <strong>plan réseau final</strong> :
+            </p>
+          </div>
+
+          <div class="cub-large-image">
+            <img class="zoomable-image" src="images/cub-plan-final.png" alt="Plan réseau final du projet CUB">
+          </div>
+        </div>
       </div>
     </section>
 
