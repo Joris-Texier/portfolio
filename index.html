@@ -866,6 +866,67 @@
       line-height: 1.9;
     }
 
+    /* BAREC */
+    .barec-title-blue {
+      color: #1e3a8a !important;
+    }
+
+    .barec-missions-wrap {
+      margin-top: 10px;
+      background: rgba(255,255,255,0.35);
+      border: 1px solid #dbe3ef;
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+    }
+
+    .barec-missions-image {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+      margin-top: 18px;
+    }
+
+    .barec-missions-image img {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    .barec-doc-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .barec-doc-card {
+      background: white;
+      border: 1px solid #dbe3ef;
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .barec-doc-card h4 {
+      color: #1e3a8a;
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .barec-doc-card p {
+      color: #374151;
+      font-size: 1rem;
+      margin: 0;
+    }
+
     .zoomable-image {
       cursor: zoom-in;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1022,7 +1083,8 @@
       .project-methods,
       .cub-layout,
       .ap-layout,
-      .ap-missions-grid {
+      .ap-missions-grid,
+      .barec-doc-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1389,75 +1451,6 @@
             <a class="btn primary external-doc" href="https://drive.google.com/file/d/1IeUoUaELuEnEhw-08xmqFCXiGp57R01_/view?usp=sharing">Diaporama en lien avec la mission 3</a>
           </aside>
         </div>
-
-        <div class="stage-separator"></div>
-
-        <div class="stage-detail-layout">
-          <div class="stage-detail-content">
-            <h3 class="stage-main-title">Stage de deuxième année - DGFIP</h3>
-            <p class="stage-period"><strong>Période de stage :</strong> 06/01/2025 - 14/02/2025</p>
-            <p class="section-text" style="max-width: 100%;">
-              En deuxième année de BTS SIO option SISR, j'ai eu l'opportunité d'effectuer un stage
-              au service infrastructure de la DGFIP (Direction générale des Finances Publiques).
-            </p>
-
-            <h4 class="stage-subtitle">Missions</h4>
-            <ul class="stage-missions">
-              <li>Installation et configuration de Docker avec Zabbix et Joplin Server + Portainer.</li>
-              <li>Mise en place d’un système de sauvegarde et de monitoring avancé pour les conteneurs Docker.</li>
-            </ul>
-
-            <h4 class="stage-subtitle">Compétences E5</h4>
-            <ul class="stage-skills">
-              <li>Gérer le patrimoine informatique</li>
-              <li>Mettre à disposition des utilisateurs un service informatique</li>
-            </ul>
-          </div>
-
-          <aside class="stage-side-card">
-            <div class="stage-logo-box">
-              <img class="zoomable-image" src="images/Logo_DGFP-fr.svg" alt="Logo DGFIP">
-            </div>
-            <a class="btn primary external-doc" href="https://drive.google.com/file/d/1F-Lm3L3v4iIb8OWk7w-S-LJicOpbaqpv/view?usp=sharing">Rapport de stage</a>
-            <a class="btn primary external-doc" href="https://drive.google.com/file/d/1zUQugZA5SawtkdyAbU6oS0vTAyqBXC7n/view?usp=sharing">Documentation : Mission 1</a>
-            <a class="btn primary external-doc" href="https://drive.google.com/file/d/1aG9ao2B0i1Y-Y3SU6QXfplIdAps2ov1G/view?usp=sharing">Documentation : Mission 2</a>
-          </aside>
-        </div>
-
-        <div class="stage-separator"></div>
-
-        <div class="stage-detail-layout">
-          <div class="stage-detail-content">
-            <h3 class="stage-main-title">Stage de première année - Audilab</h3>
-            <p class="stage-period"><strong>Période de stage :</strong> 21/05/2024 - 26/06/2024</p>
-            <p class="section-text" style="max-width: 100%;">
-              En première année de BTS SIO option SISR, j'ai eu l'opportunité d'effectuer un stage
-              au service infrastructure à Audilab.
-            </p>
-
-            <h4 class="stage-subtitle">Missions</h4>
-            <ul class="stage-missions">
-              <li>Gestion administrative d'une base de données sur Clarilog, mise à jour de données des utilisateurs.</li>
-              <li>Mise en place de rapport mensuel concernant l'usage d'Internet à l'aide de la solution Cisco Meraki. Simulation de phishing avec l’outil Mailinblack pour évaluer la vulnérabilité des employés et sensibiliser aux cybermenaces.</li>
-              <li>La gestion des groupes et utilisateur d’un Active Directory.</li>
-            </ul>
-
-            <h4 class="stage-subtitle">Compétences E5</h4>
-            <ul class="stage-skills">
-              <li>Gérer le patrimoine informatique</li>
-              <li>Mettre à disposition des utilisateurs un service informatique</li>
-              <li>Répondre aux incidents et aux demandes d'assistance</li>
-              <li>Organiser son développement professionnel</li>
-            </ul>
-          </div>
-
-          <aside class="stage-side-card">
-            <div class="stage-logo-box">
-              <img class="zoomable-image" src="images/Audilab.jpg" alt="Logo Audilab">
-            </div>
-            <a class="btn primary external-doc" href="https://drive.google.com/file/d/1Z2paaQJQEwyu8AUvz588KL-dCHMmASw_/view?usp=sharing">Rapport de stage</a>
-          </aside>
-        </div>
       </div>
     </section>
 
@@ -1510,59 +1503,6 @@
             </div>
           </div>
         </div>
-
-        <div class="certif-block">
-          <div class="certif-layout">
-            <div class="certif-content">
-              <h3>Notions de bases sur les réseau</h3>
-              <p>
-                La certification "Notions de base sur les réseaux" par NetAcad est le premier module
-                du cursus CCNA. Elle introduit les concepts fondamentaux des réseaux informatiques,
-                préparant les étudiants aux rôles d'Administrateur Réseau ou Ingénieur Réseau.
-              </p>
-              <p>
-                Le cursus complet inclut plusieurs modules sur la commutation, le routage, et les
-                réseaux sans fil, avec un examen final pour obtenir la certification.
-              </p>
-              <a class="btn primary certif-btn external-doc" href="https://drive.google.com/file/d/1dmFhgMRIQcaQ63HWsXkdY8PvrPf54qFI/view?usp=sharing">Certification</a>
-            </div>
-            <div class="certif-logo">
-              <img class="zoomable-image" src="images/Cisco.avif" alt="Logo Cisco">
-            </div>
-          </div>
-        </div>
-
-        <div class="certif-block">
-          <div class="certif-layout">
-            <div class="certif-content">
-              <h3>Ethical hacker</h3>
-              <p>
-                La certification "Ethical Hacker" de NetAcad est conçue pour former des professionnels
-                capables de tester et de sécuriser les systèmes informatiques en adoptant une approche offensive.
-              </p>
-              <p>
-                Ce cours gratuit en ligne de 70 heures prépare les apprenants aux rôles de testeur de
-                pénétration et d’analyste en cybersécurité. Il inclut des laboratoires pratiques et des
-                scénarios réels pour comprendre les tactiques des cybercriminels et renforcer les défenses
-                des réseaux. Les participants peuvent obtenir un certificat et un badge numérique en réussissant
-                l’examen final et un défi "Capture the Flag".
-              </p>
-              <a class="btn primary certif-btn external-doc" href="https://www.netacad.com/dashboard">Certification</a>
-
-              <div style="margin-top:22px;">
-                <p style="font-weight:700; color:#1e3a8a; font-size:1.45rem; margin-bottom:10px;">
-                  Compétence E5 :
-                </p>
-                <ul style="padding-left:28px; color:#374151; font-size:1.35rem; line-height:1.9;">
-                  <li>Organiser son développement professionnel</li>
-                </ul>
-              </div>
-            </div>
-            <div class="certif-logo certif-logo-ethical">
-              <img class="zoomable-image" src="images/ethical hacker.png" alt="Certification Ethical Hacker">
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -1579,49 +1519,6 @@
             de A à Z, de sa phase de conception à sa phase finale. Pour ce faire, il faut définir les objectifs,
             les ressources humaines et matérielles nécessaires, le budget, les délais et les contraintes éventuelles.
           </p>
-        </div>
-
-        <h3 class="project-subtitle">Les méthodes de gestion de projet :</h3>
-
-        <div class="project-methods">
-          <div class="project-method-card">
-            <h3>Méthode Cascade</h3>
-            <a class="btn primary project-method-btn external-doc" href="https://drive.google.com/file/d/1gS_ryTYSwXD5VxEnFJb64vv60U2whUGP/view?usp=sharing">Voir plus</a>
-          </div>
-
-          <div class="project-method-card">
-            <h3>Méthode Agile</h3>
-            <a class="btn primary project-method-btn external-doc" href="https://drive.google.com/file/d/1ton7aZ_KxxRWkvXk8x25LGT3OoJvoMjH/view?usp=sharing">Voir plus</a>
-          </div>
-
-          <div class="project-method-card">
-            <h3>Méthode PERT</h3>
-            <a class="btn primary project-method-btn external-doc" href="https://drive.google.com/file/d/1gBRzMFVAWBxRHNjBsO-TsGoxEG1rkbHn/view?usp=sharing">Voir plus</a>
-          </div>
-
-          <div class="project-method-card">
-            <h3>Méthode Scrum</h3>
-            <a class="btn primary project-method-btn external-doc" href="https://drive.google.com/file/d/1JifF_LEtmuds5QKal0G55soWXU6rHEV1/view?usp=sharing">Voir plus</a>
-          </div>
-        </div>
-
-        <div class="project-notion-block">
-          <h3 class="project-subtitle" style="margin-top:0;">Notion :</h3>
-          <p class="project-notion-text">
-            Durant la troisième année nous avons utilisé Notion, avec la méthode Agile. Notion est un outil
-            de gestion de projet en ligne qui peut être utilisé avec diverses méthodes de gestion de projet,
-            comme Scrum et d'autres approches agiles.
-          </p>
-          <p class="project-notion-text">
-            Il offre une plateforme visuelle où les utilisateurs peuvent organiser leurs tâches sous forme de cartes,
-            les déplacer entre différentes colonnes représentant différents états du flux de travail, et collaborer
-            avec leur équipe en temps réel.
-          </p>
-
-          <h3 class="project-subtitle">Interface Notion :</h3>
-          <div class="project-image-wrap">
-            <img class="zoomable-image" src="images/notion.avif" alt="Interface Notion">
-          </div>
         </div>
       </div>
     </section>
@@ -1668,7 +1565,7 @@
               <h3>Start@Dev - Mission 1</h3>
               <p><strong>Comparatif CMS</strong></p>
               <a class="btn primary external-doc" href="https://drive.google.com/file/d/10ZPzz974-OnMY9L6XS3Cv7hI9FzKlgWE/view?usp=sharing">Documentation mission 1 : Comparatif</a>
-               <a class="btn primary external-doc" href="https://drive.google.com/file/d/1Q_KphbJL8NQAFi-6_9_GRY-u8vJNdWI0/view?usp=sharing">Documentation mission 1 : Présentation de la solution retenue</a>
+              <a class="btn primary external-doc" href="https://drive.google.com/file/d/1Q_KphbJL8NQAFi-6_9_GRY-u8vJNdWI0/view?usp=sharing">Documentation mission 1 : Présentation de la solution retenue</a>
             </div>
 
             <div class="ap-mission-card">
@@ -1691,7 +1588,7 @@
               <p><strong>AC-Blanqui</strong></p>
               <a class="btn primary external-doc" href="https://drive.google.com/file/d/15r-PM4NFNy2SvqIQwR2IuXJ3-yqG-xim/view?usp=sharing">Documentation mission 4 : Charte graphique</a>
               <a class="btn primary external-doc" href="https://drive.google.com/file/d/14pCUrpYxnsaLRGkeIK0FTiPf8hXa6Yhe/view?usp=sharing">Documentation mission 4 : Fiche recette évolution du site</a>
-                  <a class="btn primary external-doc" href="https://drive.google.com/file/d/15g7eKtsVplFDXD4CAGQwhtqE6kxT9H3h/view?usp=sharing">Documentation mission 4 : Fiche recette du site existant</a>
+              <a class="btn primary external-doc" href="https://drive.google.com/file/d/15g7eKtsVplFDXD4CAGQwhtqE6kxT9H3h/view?usp=sharing">Documentation mission 4 : Fiche recette du site existant</a>
             </div>
           </div>
 
@@ -1703,6 +1600,79 @@
               <li>Travailler en mode projet</li>
               <li>Mettre à disposition des utilisateurs un service informatique</li>
             </ul>
+          </div>
+        </div>
+
+        <div class="ap-block">
+          <div class="ap-layout">
+            <div class="ap-content">
+              <h3 class="barec-title-blue">Présentation du Contexte Barec Automatismes</h3>
+              <p>
+                L'entreprise Barec Automatismes, SA au capital de 5 000 000 € produit et vend des automates industriels. basée en France, la société possède 2 sites et plusieurs agences. Elle produit chaque jour plus de 8 000 automates programmables et comporte 62 personnes dédiées à cette production.
+              </p>
+              <p>
+                Suite a un audit informatique, il s'avère que le système informatique de l'entreprise est vieillissant et manque de réactivité.
+              </p>
+              <p>
+                Il a donc été décidé de le mettre à jour.
+              </p>
+            </div>
+
+            <div class="ap-image-box">
+              <img class="zoomable-image" src="images/barec-logo.png" alt="Logo Barec Automatismes">
+            </div>
+          </div>
+        </div>
+
+        <div class="ap-block">
+          <h3 class="project-subtitle" style="margin-top:0;">Missions réalisées - deuxième semestre de première année</h3>
+
+          <div class="barec-missions-wrap">
+            <div class="barec-missions-image">
+              <img class="zoomable-image" src="images/barec-missions.png" alt="Missions BAREC Automatismes">
+            </div>
+
+            <div class="barec-doc-grid">
+              <div class="barec-doc-card">
+                <h4>BAREC - AP1</h4>
+                <p>Mission 1 - Définir un nouveau plan d'adressage</p>
+                <p>Mission 2 - Maquettage de l'infrastructure réseau et mise en place</p>
+                <p>Mission 3 - Maquettage de l'accès wifi et mise en place</p>
+                <a class="btn primary external-doc" href="#">Documentation AP1</a>
+              </div>
+
+              <div class="barec-doc-card">
+                <h4>BAREC - AP2</h4>
+                <p>Mission 1 - Installation de postes clients</p>
+                <p>Mission 2 - Recherche et mise en place d’un outil de déploiement des postes</p>
+                <p>Mission 3 - Recherche et mise en place d’un outil de gestion d’incident</p>
+                <a class="btn primary external-doc" href="#">Documentation AP2</a>
+              </div>
+
+              <div class="barec-doc-card">
+                <h4>BAREC - AP3</h4>
+                <p>Mission 1 - Mise en place du service d’authentification et d’annuaire AD sous Windows Serveur BA01</p>
+                <p>Mission 2 - Mise en place du service DHCP sous Linux (serveur BA02) / modification des paramétrages réseaux des routeurs en conséquence</p>
+                <a class="btn primary external-doc" href="#">Documentation AP3</a>
+              </div>
+
+              <div class="barec-doc-card">
+                <h4>BAREC - AP4</h4>
+                <p>Mission 1 - Mise en place du serveur Web BA04 sous Linux</p>
+                <p>Mission 2 - Gestion de la sauvegarde des contenus Web hébergé sur le serveur BA04</p>
+                <a class="btn primary external-doc" href="#">Documentation AP4</a>
+              </div>
+            </div>
+
+            <div class="ap-e5-box">
+              <h3>Compétences E5</h3>
+              <ul>
+                <li>Gérer le patrimoine informatique</li>
+                <li>Répondre aux incidents et aux demandes d’assistance et d’évolution</li>
+                <li>Travailler en mode projet</li>
+                <li>Mettre à disposition des utilisateurs un service informatique</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -1753,45 +1723,6 @@
             <div class="cub-image-box">
               <img class="zoomable-image" src="images/cub.png" alt="Illustration du contexte CUB">
             </div>
-          </div>
-        </div>
-
-        <div class="cub-block">
-          <div class="cub-content">
-            <p>
-              Dans le cadre du projet d’infrastructure CUB, mon binôme et moi avons été chargés du
-              déploiement de l’agence <strong>Frankfurt</strong>. Le schéma réseau ci-dessous détaille
-              l’architecture entière regroupant tous les groupes de la classe.
-            </p>
-          </div>
-
-          <div class="cub-large-image">
-            <img class="zoomable-image" src="images/cub1.png" alt="Schéma réseau global du projet CUB">
-          </div>
-        </div>
-
-        <div class="cub-block">
-          <div class="cub-content">
-            <p>
-              Voici un <strong>plan de notre réseau Frankfurt</strong> au lancement réalisé sur Cisco
-              Packet Tracer.
-            </p>
-          </div>
-
-          <div class="cub-large-image">
-            <img class="zoomable-image" src="images/maquette de base.png" alt="Plan initial du réseau Frankfurt">
-          </div>
-        </div>
-
-        <div class="cub-block">
-          <div class="cub-content">
-            <p>
-              Puis le <strong>plan réseau final</strong> :
-            </p>
-          </div>
-
-          <div class="cub-large-image">
-            <img class="zoomable-image" src="images/maquette final.png" alt="Plan réseau final du projet CUB">
           </div>
         </div>
       </div>
@@ -1884,6 +1815,11 @@
 
     docLinks.forEach(link => {
       link.addEventListener('click', function (e) {
+        if (this.getAttribute('href') === '#') {
+          e.preventDefault();
+          return;
+        }
+
         e.preventDefault();
         const url = this.href;
         window.open(
