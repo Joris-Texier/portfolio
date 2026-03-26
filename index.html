@@ -1711,13 +1711,13 @@
           <div class="ap-layout">
             <div class="ap-content">
               <h3 style="color:#1e3a8a;">Présentation du Contexte Barec Automatismes</h3>
-              <p style="color:#1e3a8a;">
-                L'entreprise Barec Automatismes, SA au capital de 5 000 000 € produit et vend des automates industriels. basée en France, la société possède 2 sites et plusieurs agences.
+              <p>
+                L'entreprise Barec Automatismes, SA au capital de 5 000 000 € produit et vend des automates industriels. Basée en France, la société possède 2 sites et plusieurs agences.
               </p>
-              <p style="color:#1e3a8a;">
+              <p>
                 Elle produit chaque jour plus de 8 000 automates programmables et comporte 62 personnes dédiées à cette production.
               </p>
-              <p style="color:#1e3a8a;">
+              <p>
                 Suite a un audit informatique, il s'avère que le système informatique de l'entreprise est vieillissant et manque de réactivité.
                 Il a donc été décidé de le mettre à jour.
               </p>
@@ -1732,10 +1732,6 @@
         <div class="ap-block">
           <h3 class="project-subtitle" style="margin-top:0;">Missions réalisées - deuxième semestre de première année</h3>
 
-          <div class="ap-image-box" style="margin-bottom:28px;">
-            <img class="zoomable-image" src="images/barec-missions.png" alt="Missions Barec Automatismes">
-          </div>
-
           <div class="ap-missions-grid">
             <div class="ap-mission-card">
               <h3>BAREC - AP1</h3>
@@ -1743,6 +1739,9 @@
               <p>Mission 1 - Définir un nouveau plan d'adressage</p>
               <p>Mission 2 - Maquettage de l'infrastructure réseau et mise en place</p>
               <p>Mission 3 - Maquettage de l'accès wifi et mise en place</p>
+              <a class="btn primary external-doc" href="#">Documentation AP1 - Mission 1</a>
+              <a class="btn primary external-doc" href="#">Documentation AP1 - Mission 2</a>
+              <a class="btn primary external-doc" href="#">Documentation AP1 - Mission 3</a>
             </div>
 
             <div class="ap-mission-card">
@@ -1751,6 +1750,9 @@
               <p>Mission 1 - Installation de postes clients</p>
               <p>Mission 2 - Recherche et mise en place d’un outil de déploiement des postes</p>
               <p>Mission 3 - Recherche et mise en place d’un outil de gestion d’incident</p>
+              <a class="btn primary external-doc" href="#">Documentation AP2 - Mission 1</a>
+              <a class="btn primary external-doc" href="#">Documentation AP2 - Mission 2</a>
+              <a class="btn primary external-doc" href="#">Documentation AP2 - Mission 3</a>
             </div>
 
             <div class="ap-mission-card">
@@ -1758,6 +1760,8 @@
               <p><strong>Services réseau</strong></p>
               <p>Mission 1 - Mise en place du service d’authentification et d’annuaire AD sous Windows Serveur BA01</p>
               <p>Mission 2 - Mise en place du service DHCP sous Linux (serveur BA02) / modification des paramétrages réseaux des routeurs en conséquence</p>
+              <a class="btn primary external-doc" href="#">Documentation AP3 - Mission 1</a>
+              <a class="btn primary external-doc" href="#">Documentation AP3 - Mission 2</a>
             </div>
 
             <div class="ap-mission-card">
@@ -1765,6 +1769,8 @@
               <p><strong>Serveur Web et sauvegarde</strong></p>
               <p>Mission 1 - Mise en place du serveur Web BA04 sous Linux</p>
               <p>Mission 2 - Gestion de la sauvegarde des contenus Web hébergé sur le serveur BA04</p>
+              <a class="btn primary external-doc" href="#">Documentation AP4 - Mission 1</a>
+              <a class="btn primary external-doc" href="#">Documentation AP4 - Mission 2</a>
             </div>
           </div>
 
@@ -1957,6 +1963,12 @@
 
     docLinks.forEach(link => {
       link.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === "#") {
+          e.preventDefault();
+          return;
+        }
+
         e.preventDefault();
         const url = this.href;
         window.open(
