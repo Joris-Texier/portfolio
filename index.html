@@ -1439,7 +1439,7 @@
             <ul class="stage-missions">
               <li>Gestion administrative d'une base de données sur Clarilog, mise à jour de données des utilisateurs.</li>
               <li>Mise en place de rapport mensuel concernant l'usage d'Internet à l'aide de la solution Cisco Meraki. Simulation de phishing avec l’outil Mailinblack pour évaluer la vulnérabilité des employés et sensibiliser aux cybermenaces.</li>
-              <li>La gestion des groupes et utilisateurs d’un Active Directory.</li>
+              <li>La gestion des groupes et utilisateur d’un Active Directory.</li>
             </ul>
 
             <h4 class="stage-subtitle">Compétences E5</h4>
@@ -1732,6 +1732,10 @@
         <div class="ap-block">
           <h3 class="project-subtitle" style="margin-top:0;">Missions réalisées - deuxième semestre de première année</h3>
 
+          <div class="ap-image-box" style="margin-bottom:28px;">
+            <img class="zoomable-image" src="images/barec-missions.png" alt="Missions Barec Automatismes">
+          </div>
+
           <div class="ap-missions-grid">
             <div class="ap-mission-card">
               <h3>BAREC - AP1</h3>
@@ -1739,9 +1743,6 @@
               <p>Mission 1 - Définir un nouveau plan d'adressage</p>
               <p>Mission 2 - Maquettage de l'infrastructure réseau et mise en place</p>
               <p>Mission 3 - Maquettage de l'accès wifi et mise en place</p>
-              <a class="btn primary external-doc" href="#">Documentation AP1 - Mission 1</a>
-              <a class="btn primary external-doc" href="#">Documentation AP1 - Mission 2</a>
-              <a class="btn primary external-doc" href="#">Documentation AP1 - Mission 3</a>
             </div>
 
             <div class="ap-mission-card">
@@ -1750,9 +1751,6 @@
               <p>Mission 1 - Installation de postes clients</p>
               <p>Mission 2 - Recherche et mise en place d’un outil de déploiement des postes</p>
               <p>Mission 3 - Recherche et mise en place d’un outil de gestion d’incident</p>
-              <a class="btn primary external-doc" href="#">Documentation AP2 - Mission 1</a>
-              <a class="btn primary external-doc" href="#">Documentation AP2 - Mission 2</a>
-              <a class="btn primary external-doc" href="#">Documentation AP2 - Mission 3</a>
             </div>
 
             <div class="ap-mission-card">
@@ -1760,8 +1758,6 @@
               <p><strong>Services réseau</strong></p>
               <p>Mission 1 - Mise en place du service d’authentification et d’annuaire AD sous Windows Serveur BA01</p>
               <p>Mission 2 - Mise en place du service DHCP sous Linux (serveur BA02) / modification des paramétrages réseaux des routeurs en conséquence</p>
-              <a class="btn primary external-doc" href="#">Documentation AP3 - Mission 1</a>
-              <a class="btn primary external-doc" href="#">Documentation AP3 - Mission 2</a>
             </div>
 
             <div class="ap-mission-card">
@@ -1769,8 +1765,6 @@
               <p><strong>Serveur Web et sauvegarde</strong></p>
               <p>Mission 1 - Mise en place du serveur Web BA04 sous Linux</p>
               <p>Mission 2 - Gestion de la sauvegarde des contenus Web hébergé sur le serveur BA04</p>
-              <a class="btn primary external-doc" href="#">Documentation AP4 - Mission 1</a>
-              <a class="btn primary external-doc" href="#">Documentation AP4 - Mission 2</a>
             </div>
           </div>
 
@@ -1882,3 +1876,194 @@
         <p class="section-text">Cette page est vide pour le moment.</p>
       </div>
     </section>
+
+    <section id="contact" class="page-section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Me joindre</h3>
+            <p>Email : <a href="mailto:joristexier37290@gmail.com">joristexier37290@gmail.com</a></p>
+            <p>GitHub : <a href="https://github.com/Joris-Texier" target="_blank">Joris-Texier</a></p>
+            <p>LinkedIn : <a href="https://www.linkedin.com/in/joris-texier-0939b7314/" target="_blank">Profil LinkedIn</a></p>
+          </div>
+          <div class="card">
+            <h3>CV</h3>
+            <a class="btn primary external-doc" href="https://drive.google.com/file/d/1jEHHK6z1tsTrzlUlDeTbD-fDbb4E4m3K/view?usp=sharing">Télécharger mon CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 - Joris Texier - Portfolio BTS SIO SISR</p>
+    </div>
+  </footer>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="image-modal" id="imageModal">
+    <button class="image-modal-close" id="closeImageModal" aria-label="Fermer">×</button>
+    <img id="modalImage" class="image-modal-content" src="" alt="">
+    <div class="image-modal-caption" id="modalCaption"></div>
+  </div>
+
+  <script>
+    const navLinks = document.querySelectorAll('.menu a, .submenu a');
+    const sections = document.querySelectorAll('.page-section');
+
+    function showSection(sectionId) {
+      sections.forEach(section => {
+        section.classList.remove('active-section');
+      });
+
+      document.querySelectorAll('.menu > li > a').forEach(link => {
+        link.classList.remove('active-link');
+      });
+
+      const target = document.querySelector(sectionId);
+      const directLink = document.querySelector(`.menu > li > a[href="${sectionId}"]`);
+      const submenuLink = document.querySelector(`.submenu a[href="${sectionId}"]`);
+
+      if (target) {
+        target.classList.add('active-section');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      if (directLink) {
+        directLink.classList.add('active-link');
+      }
+
+      if (submenuLink) {
+        submenuLink.closest('.has-submenu').querySelector(':scope > a').classList.add('active-link');
+      }
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          showSection(href);
+        }
+      });
+    });
+  </script>
+
+  <script>
+    const docLinks = document.querySelectorAll('.external-doc');
+
+    docLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const url = this.href;
+        window.open(
+          url,
+          '_blank',
+          'width=1200,height=850,menubar=no,toolbar=no,location=yes,status=no,resizable=yes,scrollbars=yes'
+        );
+      });
+    });
+
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalCaption = document.getElementById('modalCaption');
+    const closeImageModal = document.getElementById('closeImageModal');
+    const zoomableImages = document.querySelectorAll('img');
+
+    zoomableImages.forEach(img => {
+      img.classList.add('zoomable-image');
+
+      img.addEventListener('click', function () {
+        imageModal.classList.add('active');
+        modalImage.src = this.src;
+        modalImage.alt = this.alt || 'Image agrandie';
+        modalCaption.textContent = this.alt || '';
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeModal() {
+      imageModal.classList.remove('active');
+      modalImage.src = '';
+      modalCaption.textContent = '';
+      document.body.style.overflow = '';
+    }
+
+    closeImageModal.addEventListener('click', closeModal);
+
+    imageModal.addEventListener('click', function (e) {
+      if (e.target === imageModal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  </script>
+
+  <script>
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particles = [];
+
+    for (let i = 0; i < 60; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 1,
+        vy: (Math.random() - 0.5) * 1
+      });
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = 0; i < particles.length; i++) {
+        let p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+        ctx.fillStyle = '#2563eb';
+        ctx.fill();
+
+        for (let j = i + 1; j < particles.length; j++) {
+          let p2 = particles[j];
+          let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.strokeStyle = 'rgba(37, 99, 235, 0.2)';
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(draw);
+    }
+
+    draw();
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>
