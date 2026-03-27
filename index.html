@@ -781,8 +781,10 @@
 
     .ap-image-box {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      gap: 18px;
       background: white;
       border: 1px solid #e5e7eb;
       border-radius: 16px;
@@ -795,6 +797,10 @@
       max-width: 360px;
       object-fit: contain;
       border-radius: 10px;
+    }
+
+    .ap-image-box .btn {
+      max-width: 320px;
     }
 
     .ap-missions-grid {
@@ -1726,7 +1732,6 @@
             <div class="ap-image-box">
               <img class="zoomable-image" src="images/barec.avif" alt="Logo Barec Automatismes">
               <a class="btn primary external-doc" href="https://drive.google.com/file/d/1tZEy_I_YrnN7v2RcuvyN0m81Flvkt6bE/view?usp=sharing">Contexte Barec Automatismes</a>
-              
             </div>
           </div>
         </div>
