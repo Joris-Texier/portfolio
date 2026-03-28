@@ -637,6 +637,164 @@
       object-fit: contain;
     }
 
+
+    /* VEILLE */
+    .veille-title-wrap {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .veille-title-wrap h2 {
+      color: #1e3a8a;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .veille-title-line {
+      width: 220px;
+      height: 3px;
+      background: #355d8c;
+      margin: 0 auto;
+      border-radius: 999px;
+    }
+
+    .veille-hero,
+    .veille-topic-grid,
+    .veille-tools-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .veille-card,
+    .veille-visual-card,
+    .veille-highlight {
+      background: rgba(255,255,255,0.72);
+      border: 1px solid #dbe3ef;
+      border-radius: 18px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .veille-card {
+      padding: 28px;
+    }
+
+    .veille-visual-card {
+      padding: 18px;
+    }
+
+    .veille-highlight {
+      padding: 20px 24px;
+      margin-top: 34px;
+    }
+
+    .veille-subtitle {
+      font-size: 1.8rem;
+      color: #1e3a8a;
+      margin-bottom: 16px;
+    }
+
+    .veille-text {
+      color: #374151;
+      font-size: 1.08rem;
+      margin-bottom: 16px;
+      line-height: 1.85;
+    }
+
+    .veille-text:last-child {
+      margin-bottom: 0;
+    }
+
+    .veille-focus {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .veille-focus-box {
+      background: linear-gradient(135deg, rgba(30,58,138,0.08), rgba(77,163,255,0.08));
+      border: 1px solid rgba(30,58,138,0.12);
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .veille-focus-label {
+      color: #355d8c;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .veille-focus-title {
+      color: #111827;
+      font-size: 1.65rem;
+      margin-bottom: 12px;
+    }
+
+    .veille-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .veille-tag {
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid #dbe3ef;
+      color: #355d8c;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .veille-image-frame {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 12px;
+    }
+
+    .veille-image-frame img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .veille-section-gap {
+      margin-top: 34px;
+    }
+
+    .veille-tool-card {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      padding: 24px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid #dbe3ef;
+      border-radius: 18px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .veille-tool-card h4 {
+      color: #1e3a8a;
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+
+    .veille-tool-card p {
+      color: #374151;
+      font-size: 1.04rem;
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    .veille-tool-card .veille-image-frame {
+      margin-top: auto;
+    }
+
     /* CUB */
     .cub-block {
       padding: 36px 0;
@@ -1029,7 +1187,10 @@
       .project-methods,
       .cub-layout,
       .ap-layout,
-      .ap-missions-grid {
+      .ap-missions-grid,
+      .veille-hero,
+      .veille-topic-grid,
+      .veille-tools-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1053,7 +1214,10 @@
       }
 
       .card,
-      .parcours-column {
+      .parcours-column,
+      .veille-card,
+      .veille-tool-card,
+      .veille-highlight {
         padding: 18px;
       }
 
@@ -1061,7 +1225,10 @@
       .parcours-column h3,
       .certif-content h3,
       .cub-content h3,
-      .ap-content h3 {
+      .ap-content h3,
+      .veille-subtitle,
+      .veille-tool-card h4,
+      .veille-focus-title {
         font-size: 1.35rem;
       }
 
@@ -1074,7 +1241,9 @@
       .project-notion-text,
       .cub-content p,
       .ap-content p,
-      .ap-intro p {
+      .ap-intro p,
+      .veille-text,
+      .veille-tool-card p {
         font-size: 1rem;
       }
 
@@ -1137,7 +1306,8 @@
         gap: 14px;
       }
 
-      .certif-title-wrap h2 {
+      .certif-title-wrap h2,
+      .veille-title-wrap h2 {
         font-size: 2rem;
       }
 
@@ -2068,12 +2238,113 @@
       </div>
     </section>
 
+    
     <section id="veille" class="page-section">
       <div class="container">
-        <h2 class="section-title">Veille</h2>
-        <p class="section-text">Cette page est vide pour le moment.</p>
+        <div class="veille-title-wrap">
+          <h2>Veille technologique</h2>
+          <div class="veille-title-line"></div>
+        </div>
+
+        <div class="veille-hero">
+          <div class="veille-card">
+            <h3 class="veille-subtitle">Pourquoi faire de la veille technologique ?</h3>
+            <p class="veille-text">
+              En informatique, la veille technologique consiste à se tenir informé des nouvelles technologies,
+              des mises à jour logicielles et des tendances dans un domaine précis comme la cybersécurité,
+              les réseaux ou la gestion de parc informatique.
+            </p>
+            <p class="veille-text">
+              Cette démarche permet de suivre l’évolution des outils, d’identifier les nouvelles menaces
+              et de mieux comprendre les solutions qui renforcent la sécurité des infrastructures.
+            </p>
+          </div>
+
+          <div class="veille-focus">
+            <div class="veille-focus-box">
+              <div class="veille-focus-label">Thème de veille</div>
+              <h3 class="veille-focus-title">Active Directory</h3>
+              <div class="veille-tags">
+                <span class="veille-tag">Active Directory</span>
+                <span class="veille-tag">SpearSpray</span>
+                <span class="veille-tag">UserLock IAM</span>
+                <span class="veille-tag">Cybersécurité</span>
+              </div>
+            </div>
+
+            <div class="veille-visual-card">
+              <div class="veille-image-frame">
+                <img src="" alt="Organisation de la veille sur Active Directory dans Notion">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="veille-topic-grid veille-section-gap">
+          <div class="veille-card">
+            <h3 class="veille-subtitle">Sujet de ma veille</h3>
+            <p class="veille-text">
+              <strong>Active Directory</strong> est un service d’annuaire de Microsoft qui permet de
+              centraliser et de gérer les utilisateurs, les ordinateurs, les droits d’accès et les
+              ressources d’un réseau d’entreprise.
+            </p>
+            <p class="veille-text">
+              <strong>SpearSpray</strong> est un outil de password spraying avancé spécialement conçu
+              pour les environnements Active Directory. Il combine l’énumération d’utilisateurs via LDAP
+              et des tentatives d’authentification ciblées et furtives afin d’essayer des mots de passe
+              tout en évitant de déclencher les politiques de verrouillage de compte.
+            </p>
+            <p class="veille-text">
+              <strong>UserLock IAM for Active Directory</strong> est une solution qui apporte à Active Directory
+              des fonctionnalités modernes de gestion des identités et des accès : authentification multifacteur (MFA),
+              contrôles d’accès contextuels, single sign-on (SSO) et surveillance des sessions en temps réel.
+            </p>
+          </div>
+
+          <div class="veille-visual-card">
+            <div class="veille-image-frame">
+              <img src="" alt="Article Notion sur SpearSpray et la sécurité Active Directory">
+            </div>
+          </div>
+        </div>
+
+        <div class="veille-tools-grid veille-section-gap">
+          <div class="veille-tool-card">
+            <h4>Feedly</h4>
+            <p>
+              J’utilise Feedly pour repérer rapidement les nouveautés autour d’Active Directory et de la
+              cybersécurité. Cela me permet de suivre différents flux d’informations et d’identifier
+              les articles les plus pertinents.
+            </p>
+            <div class="veille-image-frame">
+              <img src="" alt="Capture de Feedly utilisée pour la veille technologique">
+            </div>
+          </div>
+
+          <div class="veille-tool-card">
+            <h4>Notion</h4>
+            <p>
+              Je centralise ensuite les articles intéressants dans Notion afin de garder une veille claire,
+              organisée et facilement exploitable. Je peux ainsi retrouver rapidement les ressources liées
+              à mon thème principal : la cybersécurité appliquée à Active Directory.
+            </p>
+            <div class="veille-image-frame">
+              <img src="" alt="Tableau Notion regroupant la veille sur Active Directory">
+            </div>
+          </div>
+        </div>
+
+        <div class="veille-highlight">
+          <h3 class="veille-subtitle" style="margin-bottom: 10px;">Ma veille sur Notion</h3>
+          <p class="veille-text" style="margin-bottom: 0;">
+            Ma veille est centrée sur les enjeux de sécurité autour d’Active Directory, avec un suivi des
+            outils offensifs comme SpearSpray et des solutions de protection et de contrôle d’accès comme
+            UserLock IAM.
+          </p>
+        </div>
       </div>
     </section>
+
 
     <section id="contact" class="page-section">
       <div class="container">
